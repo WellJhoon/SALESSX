@@ -13,4 +13,4 @@ app.use(morgan("common"));
 app.use("/api", salesRoutes);
 
 app.listen(PORT);
-console.log("Server on Listen On PORT: ", PORT);
+console.log("Server Listen on PORT:", PORT);

@@ -12,6 +12,24 @@ export const getSALES = async (req, res) => {
     }
   };
 
+  export const getSingleSale = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const sale = await prisma.sales.findUnique({
+            where: { id },
+        });
+
+        if (!sale) {
+            return res.status(404).json({ error: "Sale not found" });
+        }
+
+        res.status(200).json(sale);
+    } catch (e) {
+        res.status(400).json({ error: "Error GET method", message: e.message });
+    }
+};
+
 
   //crete sale met
   export const createSALES = async (req, res) => {
