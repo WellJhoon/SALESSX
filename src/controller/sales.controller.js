@@ -2,7 +2,7 @@ import { prisma } from "../db.js";
 
 
 //Get sales Met
-export const getSales = async (req, res) => {
+export const getSALES = async (req, res) => {
     try {
       const sales = await prisma.sales.findMany();
   
@@ -14,7 +14,7 @@ export const getSales = async (req, res) => {
 
 
   //crete sale met
-  export const createSale = async (req, res) => {
+  export const createSALES = async (req, res) => {
     try {
       const { stock, unitPrice, ...rest } = req.body;
   
@@ -37,7 +37,7 @@ export const getSales = async (req, res) => {
 
 
   //update SAlE
-  export const updateSale = async (req, res) => {
+  export const updateSALES = async (req, res) => {
     try {
       const { id, ...updateData } = req.body;
   
@@ -61,7 +61,7 @@ export const getSales = async (req, res) => {
 
 
   //DeleteSale
-  export const deleteSale = async (req, res) => {
+  export const deleteSALES = async (req, res) => {
     try {
       const { id } = req.params;
   

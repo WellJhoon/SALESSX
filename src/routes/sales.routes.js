@@ -1,13 +1,13 @@
 import express, { Router } from 'express';
-import {} from 'module';
+import {getSALES, createSALES, updateSALES, deleteSALES} from '../controller.js';
 
 
 
 const router = Router();
 
-router.get("/sales", getSale);
-router.post("/sales", createSale);
-router.put("/sales/:id", updateSale);
-router.delete("/sales/:id", deleteSale);
+router.get("/sales", getSALES);
+router.post("/sales", createSALES);
+router.put("/sales/:id", updateSALES);
+router.delete("/sales/:id", deleteSALES);
 
 export default router;
