@@ -1,5 +1,5 @@
-import express, { Router } from 'express';
-import {getSALES, createSALES, updateSALES, deleteSALES} from '../controller.js';
+import { Router } from 'express';
+import {getSALES, createSALES, updateSALES, deleteSALES} from '../controller/sales.controller.js';
 
 
 
